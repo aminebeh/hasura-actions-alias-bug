@@ -1,5 +1,23 @@
-## Hasura Actions Examples
+## Start Hasura and Postgres
 
-This repo features examples of Actions to perform custom business logic with Hasura.
+```
+docker-compose up -d
+```
 
-Each example comes with it's own schema with relevant migration files to get started.
+## Apply Migrations
+
+Inside graphql-engine docker container (docker exec -it <container> /bin/bash), run the following command:
+
+```
+cd hasura
+hasura-cli migrate apply
+hasura-cli metadata apply
+```
+
+## Run Express Function
+
+```
+cd functions/nodejs-express
+npm install
+npm start
+```

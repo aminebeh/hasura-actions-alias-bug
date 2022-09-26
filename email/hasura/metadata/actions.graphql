@@ -1,7 +1,0 @@
-type Mutation {
-  sendEmail(email: String!): emailOutput
-}
-
-type emailOutput {
-  success: Boolean!
-}
