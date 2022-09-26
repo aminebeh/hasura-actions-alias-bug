@@ -3,9 +3,17 @@ actions:
   definition:
     kind: synchronous
     handler: http://host.docker.internal:3000/signup
+- name: greeting
+  definition:
+    kind: synchronous
+    handler: http://host.docker.internal:3000/greet
 custom_types:
   enums: []
   input_objects: []
   objects:
   - name: signupOutput
+  - name: GreetingOutput
+  - name: FirstLevelGreeting
+  - name: SecondLevelGreeting
+  - name: ThirdLevelGreeting
   scalars: []

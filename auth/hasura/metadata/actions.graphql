@@ -6,3 +6,31 @@ type signupOutput {
   id: Int!
   token: String!
 }
+
+type Mutation {
+  """
+  Returrn payload with nested properties
+  """
+  greeting: GreetingOutput
+}
+
+type GreetingOutput {
+  a_greeting: FirstLevelGreeting!
+}
+
+type FirstLevelGreeting {
+  nested_level: Int!
+  full_name: String!
+  b_greeting: SecondLevelGreeting
+}
+
+type SecondLevelGreeting {
+  nested_level: Int!
+  full_name: String!
+  c_greeting: ThirdLevelGreeting
+}
+
+type ThirdLevelGreeting {
+  nested_level: Int!
+  full_name: String!
+}

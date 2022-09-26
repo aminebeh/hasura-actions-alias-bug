@@ -3,4 +3,6 @@ actions:
   kind: synchronous
 endpoint: http://localhost:8080
 metadata_directory: metadata
+migrations_directory: migrations
+seeds_directory: seeds
 version: "2"
